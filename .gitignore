@@ -1,22 +1,32 @@
-raw_pgn_games/
-corrupted_pgn_games/
-ground_truth_games/
-clean_pgn_games/
-lichess_2013_01.pgn
-lichess_2013_01.pgn.zst
+# Exploded PGN folders (derivable from lichess_2013_01.pgn.zst via 01+02)
+data/clean_pgn_games/
+data/corrupted_pgn_games/
+data/ground_truth_games/
+data/raw_pgn_games/
+
+# Decompressed PGN files (regenerable by decompressing the .zst archive)
+*.pgn
+data/*.pgn
+
+# Model checkpoints (regenerable by re-running 03)
+checkpoints/
+
+# Local credentials and Jupyter caches
+.git-credentials
+.gitconfig
+.jupyter/
+.ipython/
 .ipynb_checkpoints/
+
+# System / editor
+.DS_Store
 __pycache__/
-fig*.png
-.aws/
-.cache/
+untitled.chat
+
+# SageMaker / Jupyter runtime state (regenerated automatically)
 .local/
 .npm/
-.config/
-.claude/
-.kiro/
-.agent/
 .sagemaker_sql_editor_api_cache/
 .virtual_documents/
-.bashrc
-.bash_history
-*.invalid
+.aws/
+.cache/
